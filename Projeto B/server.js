@@ -42,6 +42,6 @@ app.get('/api/latest/imagesearch/', function(req, res){
 
 })
 
-app.listen(6979, 'localhost', function(){
+app.listen(6979, function(){
 	console.log('Lançando servidor...')
 })

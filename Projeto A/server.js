@@ -62,6 +62,6 @@ app.get('/*:input', function(req, res){
 		res.sendFile(__dirname + '/error/erro.html')
 })
 
-app.listen(6979,'localhost', function(){
+app.listen(process.env.PORT || 6979,'localhost', function(){
 	console.log('Lançando servidor...')
 });
