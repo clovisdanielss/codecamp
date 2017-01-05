@@ -1,0 +1,26 @@
+extends ../layout
+
+block content
+	h1 Users Page
+	br
+	a(href="/home" title="back to home") Home
+	br
+	br
+	a(href="/users/singup" title="singup") Singup
+	br
+	br
+	table(class="table well")
+		thead
+			tr
+				th Name:
+				th Login:
+				th Date:
+				th Actions:
+			tbody
+				each valor, i in list
+					tr
+						td #{valor.name}
+						td #{valor.login}
+						td #{valor.data_cad}
+						td
+							a(href="/users/erase/#{valor._id}", title = "Erase") Apagar
